@@ -18,7 +18,6 @@ export function getStaticProps() {
       props: { posts: featuredPosts }
     };
   } catch (e) {
-    console.log(e);
     return {
       props: { posts: [] }
     };
