@@ -1,6 +1,6 @@
-import { Fragment } from "react/cjs/react.production.min";
+import PostContent from "../../components/posts/post-detail/post-content";
 
 const PostDetailPage = () => {
-  return <Fragment></Fragment>;
+  return <PostContent />;
 };
 export default PostDetailPage;
