@@ -29,7 +29,6 @@ const ContactForm = () => {
       if (!response.ok) {
         throw new Error(data.message || "Something went wrong.");
       }
-
       setRequestStatus({
         title: "Success",
         message: "Message stored successfully",
@@ -52,7 +51,9 @@ const ContactForm = () => {
     });
   };
   useEffect(() => {
-    showNotification(requestStatus);
+    if (Object.keys(requestStatus).length !== 0) {
+      showNotification(requestStatus);
+    }
   }, [requestStatus]);
   return (
     <section className={classes.contact}>
